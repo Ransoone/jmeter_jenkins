@@ -9,9 +9,19 @@
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="user" elementType="Argument">
-            <stringProp name="Argument.name">user</stringProp>
-            <stringProp name="Argument.value">${__P(users)}</stringProp>
+          <elementProp name="us1" elementType="Argument">
+            <stringProp name="Argument.name">us1</stringProp>
+            <stringProp name="Argument.value">${__P(users1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="us2" elementType="Argument">
+            <stringProp name="Argument.name">us2</stringProp>
+            <stringProp name="Argument.value">${__P(users2)}-${__P(users1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="us3" elementType="Argument">
+            <stringProp name="Argument.name">us3</stringProp>
+            <stringProp name="Argument.value">${__P(users3)}-${__P(users2)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -74,13 +84,27 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="446307407">
-            <stringProp name="1223358363">${user}</stringProp>
-            <stringProp name="0">0</stringProp>
+          <collectionProp name="-1731206632">
+            <stringProp name="1147840225">${us1}</stringProp>
+            <stringProp name="403113968">${__P(initial1)}</stringProp>
+            <stringProp name="299462288">${__P(rump1)}</stringProp>
+            <stringProp name="159342399">${__P(hold1)}+${__P(rump2)}+${__P(hold2)}+${__P(rump3)}+${__P(hold3)}</stringProp>
             <stringProp name="48">0</stringProp>
-            <stringProp name="-1113498046">${__P(hold)}</stringProp>
+          </collectionProp>
+          <collectionProp name="1785034140">
+            <stringProp name="1147840256">${us2}</stringProp>
+            <stringProp name="403114929">${__P(initial2)}</stringProp>
+            <stringProp name="299463249">${__P(rump2)}</stringProp>
+            <stringProp name="-981926611">${__P(hold2)}+${__P(rump3)}+${__P(hold3)}</stringProp>
+            <stringProp name="48">0</stringProp>
+          </collectionProp>
+          <collectionProp name="-274884375">
+            <stringProp name="1147840287">${us3}</stringProp>
+            <stringProp name="403115890">${__P(initial3)}</stringProp>
+            <stringProp name="299464210">${__P(rump3)}</stringProp>
+            <stringProp name="-158693927">${__P(hold3)}</stringProp>
             <stringProp name="48">0</stringProp>
           </collectionProp>
         </collectionProp>
@@ -88,7 +112,7 @@
           <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
         <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="PACING" enabled="true">
