@@ -241,11 +241,11 @@
         <stringProp name="Threads initial delay">0</stringProp>
         <stringProp name="Start users count">${us2}</stringProp>
         <stringProp name="Start users count burst">${us1}</stringProp>
-        <stringProp name="Start users period">${__P(hold)}</stringProp>
+        <stringProp name="Start users period">${__P(hold1)}</stringProp>
         <stringProp name="Stop users count">0</stringProp>
         <stringProp name="Stop users period">1</stringProp>
         <stringProp name="flighttime">${__P(hold2)}</stringProp>
-        <stringProp name="rampUp">${__P(ramp)}</stringProp>
+        <stringProp name="rampUp">${__P(ramp1)}</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
           <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
